@@ -1,101 +1,140 @@
-/* Light Mode (Default) */
-body {
-    font-family: 'Arial', sans-serif;
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
 }
 
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+/* Header Section */
 header {
     background: linear-gradient(90deg, #007BFF, #6610F2);
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+    color: white;
+    padding: 20px;
 }
 
 header h1 {
     font-size: 2.5rem;
 }
 
-header nav {
+header p {
+    font-size: 1.2rem;
+}
+
+nav {
     margin-top: 15px;
 }
 
-header nav a {
-    color: #fff;
+nav a {
+    color: white;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+nav a:hover {
+    color: yellow;
 }
 
+/* Dark Mode Button */
+#darkModeToggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Sections */
 section {
     padding: 50px 20px;
     margin: 20px auto;
-    max-width: 800px;
-    background: #fff;
+    max-width: 900px;
+    background: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* About Section */
 #about img {
-    max-width: 150px;
+    width: 150px;
     border-radius: 50%;
-    display: block;
-    margin: 20px auto;
+    margin-top: 20px;
 }
 
+/* Projects */
 .project-card {
-    border: 1px solid #ddd;
+    background: #fff;
     padding: 20px;
     border-radius: 8px;
-    margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card h3 {
-    color: #007BFF;
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-card a {
     text-decoration: none;
-    color: #fff;
     background: #007BFF;
+    color: white;
     padding: 10px 15px;
     border-radius: 5px;
     display: inline-block;
     margin-top: 10px;
 }
 
+/* Skills Section */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
 }
 
 .skill {
     padding: 10px 20px;
     background: #007BFF;
-    color: #fff;
+    color: white;
     border-radius: 5px;
-    display: inline-block;
     font-size: 1.2rem;
 }
 
+/* Contact Section */
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin: 10px 0;
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    padding: 10px 0;
     background: #333;
-    color: #fff;
+    color: white;
+    padding: 15px 0;
+    margin-top: 20px;
 }
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #333;
+    background-color: #222;
     color: #f9f9f9;
 }
 
@@ -103,30 +142,14 @@ header.dark-mode {
     background: linear-gradient(90deg, #111, #222);
 }
 
-header.dark-mode h1,
-header.dark-mode nav a {
-    color: #f9f9f9;
-}
-
 section.dark-mode {
-    background-color: #444;
-    color: #f9f9f9;
+    background: #444;
 }
 
 .project-card.dark-mode {
-    background-color: #555;
-    border: 1px solid #777;
+    background: #555;
 }
 
 footer.dark-mode {
-    background-color: #111;
-    color: #f9f9f9;
-}
-
-button.dark-mode {
-    background-color: #222;
-    color: #f9f9f9;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
+    background: #111;
+    }
